@@ -23,7 +23,7 @@ outputs = tf.keras.layers.Dense(1,use_bias=True,activation='sigmoid')(x)
 m = tf.keras.Model(inputs,outputs)
 
 # 编译模型 lr是learning_rate
-m.compile(tf.keras.optimizers.SGD(lr=0.1), 'mse' )
+m.compile(tf.keras.optimizers.SGD(lr=0.1), 'mse')
 
 #训练模型，以一个样本为一个batch进行迭代，verbose输出日志
 m.fit(data,y_all_trues,epochs=1000,batch_size=1,verbose=1)
