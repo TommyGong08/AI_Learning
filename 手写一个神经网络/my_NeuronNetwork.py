@@ -41,6 +41,7 @@ class NeuralNetwork:
         out_o1 = sigmoid(self.w5*out_h1 + self.w6*out_h2+self.b3)
 
         return out_o1
+
     def train(self,data,all_y_trues):
 
         learning_rate = 0.1
