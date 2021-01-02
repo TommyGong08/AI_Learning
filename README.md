@@ -10,12 +10,11 @@ This repository is used to store some projects done in the process of learning a
     -some small demos  
     -learning notes and so on  
     
-###Menu  
+### Menu  
     -Keras-Demo  
     -hand-write Neuron Network  
     -Evolutionary Computation  
     -Color Self-organize (based on SOFM)  
-
 
 此仓库用于记录人工智能学习过程中的一些项目、笔记等
 ### 内容包括  
@@ -24,18 +23,18 @@ This repository is used to store some projects done in the process of learning a
     -一些demos
     -学习笔记
     
-###目录  
+### 目录  
     -Keras的demo  
     -手写神经网络  
     -进化计算  
     -颜色自组织(基于自组织特征映射网)  
     
-学进化计算的时候看了一些例子,来自[莫烦python](https://github.com/MorvanZhou/Evolutionary-Algorithm)
+```学进化计算的时候看了一些例子,来自[莫烦python](https://github.com/MorvanZhou/Evolutionary-Algorithm)```
 
 #### TODO List：
 1. 2021.1.1后将会上传大作业第一问思路
 2. 2021.1.10后将会上传第二问思路  
 
-```将会遮蔽关键代码，1月31日后上传完毕```
+```大作业1月31日后上传完毕```
     
 
