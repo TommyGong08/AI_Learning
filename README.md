@@ -10,7 +10,7 @@ This repository is used to store some projects done in the process of learning a
     -some small demos  
     -learning notes and so on  
     
-###Menu  
+### Menu  
     -Keras-Demo  
     -hand-write Neuron Network  
     -Evolutionary Computation  
@@ -24,7 +24,7 @@ This repository is used to store some projects done in the process of learning a
     -一些demos
     -学习笔记
     
-###目录  
+### 目录  
     -Keras的demo  
     -手写神经网络  
     -进化计算  
