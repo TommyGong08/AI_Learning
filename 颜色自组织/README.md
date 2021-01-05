@@ -46,4 +46,4 @@
 ![result](/som_cm/pic/result.png) 
 
 ##### 代码魔改自 https://github.com/tody411/SOM-ColorManifolds  
-听说顺手star一下会更帅哟~
+听说nice的人都会顺手star以下哟~

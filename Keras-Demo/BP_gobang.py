@@ -7,19 +7,22 @@ BP神经网络结构：
     输出层：一个神经元
 '''
 
-import keras
-# from keras.models import Sequential
-from keras.layers import Dense,Dropout
-from keras.optimizers import SGD
+# import keras
+# # from keras.models import Sequential
+# from keras.layers import Dense,Dropout
+# from keras.optimizers import SGD
 import numpy as np
 
 # 加载数据集，尚未制作。先做一个虚拟数据集
 # 生成数据集
-x_train = np.random.randint(0,10001,(1000,361)) # 1000行，361列 ;1000个数据集 [0,10000)
+x_train = np.random.randint(0,10001,size = (1000,361)) # 1000行，361列 ;1000个数据集 [0,10000)
 y_train = np.random.randint(0,10001,(1000,1))  # 产生1000个 0-10000的随机数
 x_test = np.random.randint(0,10001,(100,361)) # 100个测试集
 y_test = np.random.randint(0,10001,(100,1)) # 产生1000个 0-10000的随机数
 
+print(x_train)
+
+'''
 # 构建模型
 model = keras.Sequential()
 model.add(Dense(64,activation='relu',input_dim=361))
@@ -38,4 +41,4 @@ model.fit(x_train,y_train,epochs=2000,batch_size=100)
 
 # evaluate返回损失值和你选定的指标值
 score = model.evaluate(x_test,y_test,batch_size=100)
-print(score)
+print(score)'''
