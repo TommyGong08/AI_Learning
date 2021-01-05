@@ -16,7 +16,7 @@
 * **tensorflow==1.6.0**
 * **tensorflow-gpu==1.8.0**
 #### 效果
-个人感觉勉强可以，毕竟数据集不是自己做的，来自大佬[@BIT可达鸭]  
+个人感觉勉强可以，毕竟数据集不是自己做的，来自大佬[@Sharpiless]("https://github.com/Sharpiless/gobang-object-detection-dataset")  
 
 `棋子不密集`  
 ![result_low](picture/low.jpg)  
