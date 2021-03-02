@@ -4,8 +4,7 @@ Artificial Intelligence Learning
 This repository is used to store some projects done in the process of learning artificial intelligence
 
 ### Including: 
-    -BIT "artificial intelligence foundation"  
-    -Great Assignment  
+    -assignments
     -thinking questions 
     -some small demos  
     -learning notes and so on  
@@ -18,7 +17,7 @@ This repository is used to store some projects done in the process of learning a
 
 此仓库用于记录人工智能学习过程中的一些项目、笔记等
 ### 内容包括  
-    -BIT《人工智能基础》大作业  
+    -作业
     -思考题 
     -一些demos
     -学习笔记
