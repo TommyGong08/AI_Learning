@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import math, copy, time
 from torch.autograd import Variable
-import torch.functional as F
+import torch.nn.functional as F
 import matplotlib as plt
 import seaborn
 seaborn.set_context(context="talk")  # seaborn风格设置

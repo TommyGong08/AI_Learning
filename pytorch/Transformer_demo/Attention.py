@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import math, copy, time
 from torch.autograd import Variable
-import torch.functional as F
+import torch.nn.functional as F
 import matplotlib as plt
 import seaborn
 import Layer as ly
@@ -12,7 +12,7 @@ def attention(query, key, value, mask=None, dropout=None):
     d_k = query.size(-1)
     scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
     if mask is not None:
-        scores = scores.masked_fill(mask==0,-1e9)
+        scores = scores.masked_fill(mask == 0, -1e9)
         p_attn = F.softmax(scores, dim = -1)
         if dropout is not None:
             p_attn = dropout(p_attn)
@@ -31,7 +31,7 @@ class MultiHeadAttention(nn.Module):
         self.h = h
         self.linears = ly.clones(nn.Linear(d_model, d_model), 4)
         self.attn = None
-        self.dropout = dropout
+        self.dropout =  nn.Dropout(p=dropout)
 
     def forward(self, query, key, value, mask=None):
         if mask is not None:
@@ -66,19 +66,19 @@ class PositionFeedForward(nn.Module):
         return self.w_2(self.dropout(F.relu(self.w_1(x))))
 
 
-class Embeddings(nn.module):
-    def __int__(self, d_model, vocab):
-        super(Embeddings, self).__int__()
+class Embeddings(nn.Module):
+    def __init__(self, d_model, vocab):
+        super(Embeddings, self).__init__()
         self.lut = nn.Embedding(vocab, d_model)
         self.d_model = d_model
 
     def forward(self, x):
-        return self.lut(x).math.sqrt(self.d_model)
+        return self.lut(x) * math.sqrt(self.d_model)
 
 
 class PositionalEncoding(nn.Module):
-    def __int__(self, d_model, dropout, max_len = 5000):
-        super(PositionalEncoding, self).__int__()
+    def __init__(self, d_model, dropout, max_len = 5000):
+        super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
 
         # compute the positional encoding once in log space
@@ -89,7 +89,7 @@ class PositionalEncoding(nn.Module):
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
         pe = pe.unsqueeze(0)
-        self.regiter_buffer('pe', pe)
+        self.register_buffer('pe', pe)
 
     def forward(self, x):
         x = x + Variable(self.pe[:, :x.size(1)], requires_grad=False)
